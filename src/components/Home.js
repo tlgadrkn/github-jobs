@@ -5,9 +5,11 @@ import { Container } from 'react-bootstrap';
 const Home = () => {
   return (
     <>
-      <Container>
+      <Container fluid className="p-0">
         <NavigationBar />
-        <div>HI FROM HOME</div>
+        <Container>
+          <div>HI FROM HOME</div>
+        </Container>
       </Container>
     </>
   );
