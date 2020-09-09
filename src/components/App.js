@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useFetch } from '../customHooks/useFetch';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import '../assets/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { fakeJob } from './mock';
 const App = () => {
-  const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
-  const GITHUB_JOBS_BASE_URL = 'https://jobs.github.com/positions.json';
-
-  const [jobs, setJobs] = useFetch(`${CORS_PROXY}${GITHUB_JOBS_BASE_URL}`);
+  // const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
+  // const GITHUB_JOBS_BASE_URL = 'https://jobs.github.com/positions.json';
 
   return (
     <Switch>
-      <Route exact path="/" render={(props) => <Home {...props} />} />
+      <Route exact path="/" render={() => <Home />} />
     </Switch>
   );
 };
