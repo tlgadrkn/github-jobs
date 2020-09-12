@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const JobsList = (props) => {
   const {
     company,
@@ -14,12 +14,14 @@ const JobsList = (props) => {
     url,
   } = props.value;
   console.log(company);
-  console.log(props);
+  console.log(url);
   return (
     <tr>
       <td>
         <h4>
-          <a href={url}>{title}</a>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
         </h4>
         <p>
           {company} - ( {type} )
