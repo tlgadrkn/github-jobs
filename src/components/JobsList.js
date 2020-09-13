@@ -1,25 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const JobsList = (props) => {
-  const {
-    company,
-    company_logo,
-    company_url,
-    created_at,
-    description,
-    id,
-    location,
-    title,
-    type,
-    url,
-  } = props.value;
-  console.log(company);
-  console.log(url);
+  const { company, created_at, location, title, type, url } = props.value;
+
   return (
     <tr>
       <td>
         <h4>
-          <a href={url} target="_blank" rel="noopener noreferrer">
+          <a href={url} target='_blank' rel='noopener noreferrer'>
             {title}
           </a>
         </h4>
