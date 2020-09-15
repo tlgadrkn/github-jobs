@@ -2,6 +2,7 @@
   "name": "github-jobs",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://jobs.github.com",
   "dependencies": {
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",

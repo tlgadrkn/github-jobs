@@ -11,6 +11,7 @@ const App = () => {
 
   const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
   const GITHUB_JOBS_BASE_URL = 'https://jobs.github.com/positions.json';
+  const GITHUB_JOBS_PAGE_QUERY = '?page=';
 
   const componentIsMounted = useRef(true);
   useEffect(() => {
@@ -21,9 +22,10 @@ const App = () => {
 
   useEffect(() => {
     async function fetchData() {
+      let pageCount = 1;
       try {
         const asyncResponse = await fetch(
-          `${CORS_PROXY}${GITHUB_JOBS_BASE_URL}`
+          `${CORS_PROXY}${GITHUB_JOBS_BASE_URL}${GITHUB_JOBS_PAGE_QUERY}${pageCount}`
         );
         const data = await asyncResponse.json();
 

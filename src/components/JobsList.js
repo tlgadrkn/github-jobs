@@ -16,8 +16,8 @@ const JobsList = (props) => {
         </p>
       </td>
       <td>
-        <span>{location}</span>
-        <span>{created_at}</span>
+        <span>{location} - </span>
+        <span> {new Date(created_at).toLocaleDateString()}</span>
       </td>
     </tr>
   );
